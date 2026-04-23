@@ -1,5 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
+<style>
+:root{
+  --r-md:16px;
+}
+
+/* Container */
+#harga{
+  padding:80px 20px;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  color:#fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.sec-header{
+  text-align:center;
+  margin-bottom:50px;
+}
+.sec-title{
+  font-size:40px;
+  font-weight:700;
+}
+.grad{
+  background: linear-gradient(90deg,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.sec-sub{
+  opacity:.7;
+}
+
+/* GRID (INI YANG PALING PENTING) */
+.price-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARD */
+.price-card{
+  padding:25px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:.3s;
+}
+.price-card:hover{
+  transform: translateY(-5px);
+}
+
+/* Featured (Standard) */
+.featured{
+  border:1px solid #3b82f6;
+  box-shadow:0 0 20px rgba(59,130,246,0.3);
+}
+
+/* Badge */
+.price-badge{
+  position:absolute;
+  background:#3b82f6;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  right:20px;
+  top:20px;
+}
+
+/* TEXT */
+.price-tier{
+  opacity:.7;
+  margin-bottom:10px;
+}
+.price-main{
+  font-size:30px;
+  color:#4ade80;
+  font-weight:bold;
+}
+.price-sub{
+  margin-bottom:15px;
+  opacity:.7;
+}
+
+/* LIST */
+.price-list{
+  list-style:none;
+  padding:0;
+  margin-bottom:20px;
+}
+.price-list li{
+  margin:8px 0;
+}
+.price-list li::before{
+  content:"✔ ";
+  color:#22c55e;
+}
+.price-list .cross{
+  opacity:.4;
+}
+.price-list .cross::before{
+  content:"✖ ";
+  color:#ef4444;
+}
+
+/* BUTTON */
+.btn-s, .btn-p{
+  display:block;
+  text-align:center;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  margin-top:10px;
+}
+.btn-s{
+  background:#334155;
+}
+.btn-p{
+  background:#3b82f6;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .sec-title{
+    font-size:28px;
+  }
+}
+</style>
 <head>
   <style>
 html {
@@ -539,6 +669,74 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
       <a href="https://www.auliasoft.com/kategori-produk/keuangancustom" class="cat-card glass sr">
         <div class="cat-icon">⚙️</div><div class="cat-name">KEUANGAN/CUSTOM</div>
       </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HARGA -->
+<section id="harga">
+  <div class="container">
+    <div class="sec-header rev">
+      <div class="sec-label">Harga Resmi</div>
+      <h2 class="sec-title">Pilih Paket yang<br><span class="grad">Sesuai Usaha Anda</span></h2>
+      <p class="sec-sub">Data harga resmi dari halaman produk Toko Kelontong di auliasoft.com. Semua paket sudah termasuk garansi 18 bulan.</p>
+    </div>
+    <div class="price-grid">
+      <!-- Basic -->
+      <div class="price-card glass rev">
+        <div class="price-tier">Basic</div>
+        <div class="price-main">Rp 1.500.000</div>
+        <div class="price-sub">Lisensi Single User</div>
+        <ul class="price-list">
+          <li>Full Akuntansi</li>
+          <li>Lisensi Single User (1 komputer)</li>
+          <li>Offline — tidak butuh internet</li>
+          <li>18 Bulan Support & Service Gratis (core)</li>
+          <li>Konvert Excel/PDF</li>
+          <li class="cross">Multi User LAN</li>
+          <li class="cross">Dashboard Web Owner</li>
+          <li class="cross">Cloud E-Sales & E-Kasir</li>
+        </ul>
+        <a class="btn-s" href="https://wa.me/6281241945881" style="display:block;text-align:center;border-radius:var(--r-md);padding:11px">Pesan Basic</a>
+      </div>
+      <!-- Standard -->
+      <div class="price-card glass featured rev">
+        <div class="price-badge">Populer</div>
+        <div class="price-tier">Standard</div>
+        <div class="price-main">Rp 2.500.000</div>
+        <div class="price-sub">Lisensi Multi User (LAN)</div>
+        <ul class="price-list">
+          <li>Full Akuntansi</li>
+          <li>Lisensi Multi User (1 jaringan LAN)</li>
+          <li>Offline — tidak butuh internet</li>
+          <li>18 Bulan Support & Service Gratis (core)</li>
+          <li>Konvert Excel/PDF</li>
+          <li>Multi Kasir dalam jaringan</li>
+          <li class="cross">Dashboard Web Owner</li>
+          <li class="cross">Cloud E-Sales & E-Kasir</li>
+        </ul>
+        <a class="btn-p" href="https://wa.me/6281241945881" style="display:block;text-align:center;border-radius:var(--r-md);padding:11px">Pesan Standard</a>
+      </div>
+      <!-- Premium -->
+      <div class="price-card glass rev">
+        <div class="price-tier">Premium</div>
+        <div class="price-main">Rp 3.500.000</div>
+        <div class="price-sub">Multi User + Dashboard Web</div>
+        <ul class="price-list">
+          <li>Full Akuntansi</li>
+          <li>Lisensi Multi User (1 jaringan LAN)</li>
+          <li>Offline — tidak butuh internet</li>
+          <li>Dashboard Web Owner (monitoring HP)</li>
+          <li>18 Bulan Support & Service Gratis (core)</li>
+          <li>Konvert Excel/PDF</li>
+          <li>Free 2 Device E-Sales</li>
+          <li>Sewa Cloud Dashboard: +Rp 300.000/thn (opsional)</li>
+          <li>Sewa Cloud E-Sales/E-Kasir: +Rp 600.000/thn (opsional)</li>
+        </ul>
+        <a class="btn-s" href="https://wa.me/6281241945881" style="display:block;text-align:center;border-radius:var(--r-md);padding:11px">Pesan Premium</a>
+      </div>
     </div>
   </div>
 </section>
