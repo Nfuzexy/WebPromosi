@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html lang="id">
 <style>
+
+/* FAQ */
+#faq{
+  padding:80px 20px;
+  background: radial-gradient(circle at bottom right, #020617, #0f172a);
+  color:#fff;
+}
+
+.faq-wrap{
+  max-width:800px;
+  margin:auto;
+}
+
+.faq-item{
+  margin-bottom:15px;
+  border-radius:16px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  overflow:hidden;
+}
+
+/* QUESTION */
+.faq-question{
+  width:100%;
+  padding:18px 20px;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  text-align:left;
+  cursor:pointer;
+  position:relative;
+}
+
+.faq-question::after{
+  content:"+";
+  position:absolute;
+  right:20px;
+  font-size:18px;
+  transition:.3s;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-question::after{
+  content:"–";
+}
+
+/* ANSWER */
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .3s ease;
+  padding:0 20px;
+}
+
+.faq-answer p{
+  padding-bottom:15px;
+  opacity:.8;
+}
+
 :root{
   --r-md:16px;
 }
@@ -1471,6 +1532,81 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    
+    <div class="sec-header">
+      <div class="sec-label">FAQ</div>
+      <h2 class="sec-title">Pertanyaan yang Sering<br><span class="grad">Ditanyakan</span></h2>
+      <p class="sec-sub">Berikut beberapa pertanyaan umum seputar produk AuliaSoft.</p>
+    </div>
+
+    <div class="faq-wrap">
+
+      <!-- ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">Apakah software bisa digunakan tanpa internet?</button>
+        <div class="faq-answer">
+          <p>Ya, sistem AuliaSoft dapat digunakan secara offline sehingga tetap berjalan meskipun tidak ada koneksi internet.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apa perbedaan paket Basic, Standard, dan Premium?</button>
+        <div class="faq-answer">
+          <p>
+            Basic untuk 1 user, Standard sudah multi user dalam jaringan LAN, dan Premium dilengkapi dashboard web serta fitur tambahan lainnya.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apakah ada garansi setelah pembelian?</button>
+        <div class="faq-answer">
+          <p>Ya, semua paket sudah termasuk support dan service selama 18 bulan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apakah bisa digunakan di lebih dari 1 komputer?</button>
+        <div class="faq-answer">
+          <p>Bisa, dengan paket Standard dan Premium yang mendukung multi user dalam jaringan LAN.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apakah tersedia fitur laporan keuangan?</button>
+        <div class="faq-answer">
+          <p>Ya, sistem sudah dilengkapi fitur full akuntansi untuk laporan keuangan yang lengkap dan otomatis.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Bagaimana cara pemesanan?</button>
+        <div class="faq-answer">
+          <p>Anda bisa langsung klik tombol “Pesan” atau “Kontak WA” untuk terhubung ke admin melalui WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apakah ada biaya tambahan?</button>
+        <div class="faq-answer">
+          <p>Ada fitur tambahan seperti cloud dashboard yang bersifat opsional dengan biaya tahunan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Apakah cocok untuk usaha kecil?</button>
+        <div class="faq-answer">
+          <p>Sangat cocok, mulai dari toko kecil hingga bisnis yang sedang berkembang.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ====== CTA ====== -->
 <section id="kontak" style="padding-bottom:60px">
   <div class="container">
@@ -1558,4 +1694,45 @@ window.addEventListener('scroll', () => {
 });
 </script>
 </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- CSS kamu -->
+  <style>
+    /* semua CSS termasuk FAQ */
+  </style>
+
+</head>
+
+<!-- ISI HTML LANGSUNG DI SINI (meskipun tanpa <body>) -->
+<section id="harga">...</section>
+
+<section id="faq">...</section>
+
+
+<!-- 🔥 TARO SCRIPT DI PALING BAWAH -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector(".faq-answer");
+
+      item.classList.toggle("active");
+
+      if(item.classList.contains("active")){
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }else{
+        answer.style.maxHeight = null;
+      }
+    });
+  });
+
+});
+</script>
+
 </html>
