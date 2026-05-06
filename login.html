@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - AuliaSoft</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #eae6df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  width: 1100px;
+  height: 650px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE */
+.left {
+  width: 45%;
+  background: linear-gradient(135deg, #0b1c2c, #1e3c2f, #6a4b1f);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo::after {
+  content: "◐";
+  font-size: 22px;
+  color: orange;
+}
+
+.left-content {
+  text-align: center;
+}
+
+.left-content h2 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.left-content p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.dots {
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #aaa;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.dots span.active {
+  background: white;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 55%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-right {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  font-size: 13px;
+}
+
+.top-right a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.right h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.right p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn-social {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* BUTTON LOGIN */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #f7a21b, #f5c04a);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.forgot {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  font-size: 12px;
+  color: #888;
+}
+
+.footer a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #666;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- LEFT -->
+  <div class="left">
+    <div class="logo"></div>
+
+    <div class="left-content">
+      <h2>One Platform kasir E-Pos<br>All Product Analytics</h2>
+      <p>Your revenue are set to grow by 20% next month.</p>
+    </div>
+
+    <div class="dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="top-right">
+      Don’t have an account? <a href="#">Sign Up</a>
+    </div>
+
+    <h2>Welcome back to AuliaSoft!</h2>
+    <p>Please enter your details to sign in your account</p>
+
+    <button class="btn-social">Continue with Google</button>
+    <button class="btn-social">Continue with Apple</button>
+
+    <div class="divider">Or sign in with</div>
+
+    <input type="email" placeholder="johndoe@mail.com">
+    <input type="password" placeholder="minimum 8 character">
+
+    <button class="btn-login">Sign In →</button>
+
+    <div class="forgot">
+      <a href="#">Forgot password?</a>
+    </div>
+
+    <div class="footer">
+      © 2024 Orion
+      <a href="#">Privacy Policy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
