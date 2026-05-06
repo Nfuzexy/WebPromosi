@@ -193,6 +193,79 @@
 </style>
 <head>
   <style>
+    
+/* ====== ULTRA TRANSPARENT GLASS ====== */
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+
+  background: rgba(255,255,255,0.02); /* sangat tipis */
+  backdrop-filter: blur(6px); /* blur ringan */
+
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.compare-table th {
+  background: rgba(255,255,255,0.05); /* bukan gradient lagi */
+  color: #fff;
+  padding: 16px;
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* CELL */
+.compare-table td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* FIRST COLUMN */
+.compare-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* HOVER HALUS */
+.compare-table tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* HIGHLIGHT AULIASOFT (LEBIH HALUS) */
+.compare-table td:nth-child(2),
+.compare-table th:nth-child(2) {
+  background: rgba(10,132,255,0.08);
+  color: #fff;
+}
+
+/* WRAPPER HILANGIN BACKGROUND */
+.table-wrap {
+  background: transparent;
+}
+
+/* INSIGHT BOX JUGA TRANSPARAN */
+.highlight-box {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Arial, sans-serif;
@@ -1138,182 +1211,320 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
 <div class="divider"></div>
 
 <!-- ======================================================== -->
-<!-- ====== 12 PRODUCT KNOWLEDGE (TAMBAHAN UTS) ====== -->
+<!-- ====== PRODUCT ROADMAP AULIASOFT ====== -->
 <!-- ======================================================== -->
-<section id="pk" style="background:linear-gradient(135deg,rgba(10,132,255,.03),rgba(191,90,242,.03))">
+<section id="roadmap" style="background:linear-gradient(135deg,rgba(10,132,255,.03),rgba(191,90,242,.03))">
   <div class="container">
     <div class="sec-center sr">
-      <div class="section-label">Analisis Produk — UTS</div>
-      <h2 class="section-title">12 <span class="grad-text">Product Knowledge</span><br>Aplikasi Kasir Aulia</h2>
+      <div class="section-label">Product Roadmap</div>
+      <h2 class="section-title">
+        Roadmap Pengembangan <br>
+        <span class="grad-text">Aplikasi Kasir Aulia</span>
+      </h2>
+      <p class="section-sub">
+        Evolusi dan arah pengembangan sistem berdasarkan fitur resmi AuliaSoft
+      </p>
+    </div>
 
     <div class="pk-table-wrap sr" style="margin-top:2.5rem">
-      <!-- ROW 1 — Biru -->
+
+      <!-- ================= PAST ================= -->
       <div class="pk-cell pk-c1">
-        <div class="pk-cell-num">01 — Pricing</div>
-        <div class="pk-cell-icon">💰</div>
-        <div class="pk-cell-title">Harga & Varian Lisensi</div>
-        <div class="pk-cell-desc">Tersedia 3 paket resmi sesuai skala usaha.</div>
+        <div class="pk-cell-num">01 — Phase 1</div>
+        <div class="pk-cell-icon">📦</div>
+        <div class="pk-cell-title">Core POS System</div>
+        <div class="pk-cell-desc">Fondasi awal aplikasi kasir desktop.</div>
         <ul class="pk-cell-list">
-          <li>Basic: Rp 1.500.000 (Single User)</li>
-          <li>Standard: Rp 2.500.000 (Multi User LAN)</li>
-          <li>Premium: Rp 3.500.000 (Multi User + Dashboard Web)</li>
-          <li>Semua: 18 bln support gratis</li>
-          <li>Cloud opsional: Rp 300rb/thn</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c1">
-        <div class="pk-cell-num">02 — FAQs</div>
-        <div class="pk-cell-icon">❓</div>
-        <div class="pk-cell-title">Pertanyaan yang Sering Diajukan</div>
-        <div class="pk-cell-desc">Jawaban berdasarkan fitur resmi produk.</div>
-        <ul class="pk-cell-list">
-          <li>Butuh internet? → Tidak, 100% offline</li>
-          <li>Berapa PC? → Basic 1, Std/Premium banyak (LAN)</li>
-          <li>Ada barcode? → Ya, Fast Checkout</li>
-          <li>Ada laporan keuangan? → Ya, Full Akuntansi</li>
-          <li>Bisa ekspor? → Ya, Excel/PDF</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c1">
-        <div class="pk-cell-num">03 — Brand</div>
-        <div class="pk-cell-icon">🏷️</div>
-        <div class="pk-cell-title">Identitas Brand AuliaSoft</div>
-        <div class="pk-cell-desc">Perusahaan pengembang aplikasi kasir ini.</div>
-        <ul class="pk-cell-list">
-          <li>Nama: PT AuliaSoft</li>
-          <li>Produk: Aplikasi Kasir Aulia (50+ varian)</li>
-          <li>Website: www.auliasoft.com</li>
-          <li>WA: 081241945881</li>
-          <li>Mitra: Kemenkop RI, Onecoop, dll</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c1">
-        <div class="pk-cell-num">04 — Product Roadmap</div>
-        <div class="pk-cell-icon">🗺️</div>
-        <div class="pk-cell-title">Peta Pengembangan Produk</div>
-        <div class="pk-cell-desc">Arah pengembangan resmi yang sudah ada.</div>
-        <ul class="pk-cell-list">
-          <li>50+ jenis toko sudah didukung</li>
-          <li>Smart AI Stok Opname (foto → data)</li>
-          <li>Smart AI Nota Beli (foto nota → massal)</li>
-          <li>Cloud Dashboard Web (opsional)</li>
-          <li>E-Sales & E-Kasir cloud (Premium)</li>
+          <li>POS Desktop Offline (100%)</li>
+          <li>Single User System</li>
+          <li>Transaksi & Cetak Struk</li>
+          <li>Manajemen Barang Dasar</li>
+          <li>Laporan Penjualan Harian</li>
         </ul>
       </div>
 
-      <!-- ROW 2 — Ungu -->
-      <div class="pk-cell pk-c2">
-        <div class="pk-cell-num">05 — Business Domain</div>
+      <div class="pk-cell pk-c1">
+        <div class="pk-cell-num">02 — Phase 2</div>
+        <div class="pk-cell-icon">🧾</div>
+        <div class="pk-cell-title">Inventory & Finance</div>
+        <div class="pk-cell-desc">Pengembangan sistem bisnis internal.</div>
+        <ul class="pk-cell-list">
+          <li>Manajemen Stok Lengkap</li>
+          <li>Pembelian & Supplier</li>
+          <li>Hutang & Piutang</li>
+          <li>Laporan Keuangan</li>
+          <li>Neraca & Laba Rugi</li>
+        </ul>
+      </div>
+
+      <div class="pk-cell pk-c1">
+        <div class="pk-cell-num">03 — Phase 3</div>
         <div class="pk-cell-icon">🏪</div>
-        <div class="pk-cell-title">Domain Bisnis yang Dilayani</div>
-        <div class="pk-cell-desc">50+ jenis usaha retail yang didukung.</div>
+        <div class="pk-cell-title">Multi Business Support</div>
+        <div class="pk-cell-desc">Ekspansi ke berbagai jenis usaha.</div>
         <ul class="pk-cell-list">
-          <li>Toko Kelontong, Sembako, Mini Market</li>
-          <li>Warung Cafe, Bakso, Kopi, Food Court</li>
-          <li>Fashion, Pakaian, Kosmetik, Optik</li>
-          <li>Counter HP, Elektronik, Komputer</li>
-          <li>Laundry, Salon, Bengkel, Klinik</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c2">
-        <div class="pk-cell-num">06 — Target Audience</div>
-        <div class="pk-cell-icon">🎯</div>
-        <div class="pk-cell-title">Target Pengguna Aplikasi</div>
-        <div class="pk-cell-desc">Siapa saja yang paling tepat menggunakan ini.</div>
-        <ul class="pk-cell-list">
-          <li>Pemilik toko kelontong/warung</li>
-          <li>Pengelola mini market & toko modern</li>
-          <li>Staf kasir dengan multi-shift</li>
-          <li>Pemilik usaha ingin laporan otomatis</li>
-          <li>UMKM yang belum punya sistem POS</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c2">
-        <div class="pk-cell-num">07 — Product Features</div>
-        <div class="pk-cell-icon">⚙️</div>
-        <div class="pk-cell-title">Fitur Utama Produk</div>
-        <div class="pk-cell-desc">7 modul terintegrasi dari deskripsi resmi.</div>
-        <ul class="pk-cell-list">
-          <li>POS Desktop (Fast Checkout, Multi POS)</li>
-          <li>Inventory Management (Multi Price, AI)</li>
-          <li>Customer & Payment (Member, Kredit)</li>
-          <li>Vendor & Payment (PO, Hutang, AI Nota)</li>
-          <li>Financial Accounting (Neraca, L/R)</li>
-          <li>Dashboard Web Online Report</li>
-        </ul>
-      </div>
-      <div class="pk-cell pk-c2">
-        <div class="pk-cell-num">08 — Competitors</div>
-        <div class="pk-cell-icon">🏆</div>
-        <div class="pk-cell-title">Keunggulan vs Kompetitor</div>
-        <div class="pk-cell-desc">Apa yang membedakan Kasir Aulia.</div>
-        <ul class="pk-cell-list">
-          <li>Beli sekali, tidak berlangganan wajib</li>
-          <li>Offline-first, tidak butuh internet harian</li>
-          <li>Support lokal 18 bln gratis</li>
-          <li>50+ konfigurasi per jenis toko</li>
-          <li>AI fitur langka di kompetitor lokal</li>
+          <li>50+ Jenis Toko Didukung</li>
+          <li>Konfigurasi per bisnis</li>
+          <li>Mode kasir fleksibel</li>
+          <li>Support UMKM Indonesia</li>
+          <li>Custom workflow tiap usaha</li>
         </ul>
       </div>
 
-      <!-- ROW 3 — Cyan -->
-      <div class="pk-cell pk-c3">
-        <div class="pk-cell-num">09 — Complementary Products</div>
-        <div class="pk-cell-icon">🔗</div>
-        <div class="pk-cell-title">Produk Pelengkap AuliaSoft</div>
-        <div class="pk-cell-desc">Ekosistem produk yang saling melengkapi.</div>
+      <!-- ================= PRESENT ================= -->
+      <div class="pk-cell pk-c2">
+        <div class="pk-cell-num">04 — Current</div>
+        <div class="pk-cell-icon">🌐</div>
+        <div class="pk-cell-title">Web Dashboard</div>
+        <div class="pk-cell-desc">Integrasi sistem dengan cloud monitoring.</div>
         <ul class="pk-cell-list">
-          <li>A-WARUNG & E-WARUNG (cafe)</li>
-          <li>A-POS & E-POS (UMKM web-based)</li>
-          <li>E-OLSHOP (toko online via WA)</li>
-          <li>Dashboard Web Owner (cloud)</li>
-          <li>Hardware POS (kategori HARDWARE)</li>
+          <li>Dashboard berbasis web</li>
+          <li>Monitoring usaha online</li>
+          <li>Multi device access</li>
+          <li>Owner control dari mana saja</li>
+          <li>Integrasi data realtime</li>
         </ul>
       </div>
-      <div class="pk-cell pk-c3">
-        <div class="pk-cell-num">10 — Use Cases</div>
-        <div class="pk-cell-icon">📋</div>
-        <div class="pk-cell-title">Skenario Penggunaan</div>
-        <div class="pk-cell-desc">Alur utama pengguna dalam sistem.</div>
+
+      <div class="pk-cell pk-c2">
+        <div class="pk-cell-num">05 — Current</div>
+        <div class="pk-cell-icon">👥</div>
+        <div class="pk-cell-title">Multi User System</div>
+        <div class="pk-cell-desc">Kolaborasi dalam satu jaringan bisnis.</div>
         <ul class="pk-cell-list">
-          <li>Kasir: Login → Transaksi → Struk</li>
-          <li>Kasir: Scan barcode → Bayar → Selesai</li>
-          <li>Pemilik: Dashboard → Cek laporan</li>
-          <li>Admin: Input barang via AI foto nota</li>
-          <li>Admin: Stok opname (AI/manual)</li>
+          <li>Multi User LAN</li>
+          <li>Multi POS kasir</li>
+          <li>Role management</li>
+          <li>Shift kasir</li>
+          <li>Kontrol akses pengguna</li>
         </ul>
       </div>
-      <div class="pk-cell pk-c3">
-        <div class="pk-cell-num">11 — Processes & Policies</div>
-        <div class="pk-cell-icon">📜</div>
-        <div class="pk-cell-title">Proses & Kebijakan Layanan</div>
-        <div class="pk-cell-desc">Prosedur resmi dari auliasoft.com.</div>
+
+      <div class="pk-cell pk-c2">
+        <div class="pk-cell-num">06 — Current</div>
+        <div class="pk-cell-icon">🤖</div>
+        <div class="pk-cell-title">AI Integration</div>
+        <div class="pk-cell-desc">Mulai integrasi kecerdasan buatan.</div>
         <ul class="pk-cell-list">
-          <li>Pesan via WA 081241945881</li>
-          <li>Setup setelah konfirmasi bayar</li>
-          <li>Garansi 18 bln core aplikasi</li>
-          <li>Dokumentasi: Video YouTube + PDF</li>
-          <li>Support remote ke seluruh Indonesia</li>
+          <li>AI Stok Opname (foto barang)</li>
+          <li>AI Input Nota Pembelian</li>
+          <li>Otomatisasi input data</li>
+          <li>Efisiensi operasional</li>
+          <li>Minim human error</li>
         </ul>
       </div>
+
+      <!-- ================= FUTURE ================= -->
       <div class="pk-cell pk-c3">
-        <div class="pk-cell-num">12 — Customization</div>
-        <div class="pk-cell-icon">🛠️</div>
-        <div class="pk-cell-title">Kustomisasi Produk</div>
-        <div class="pk-cell-desc">Fleksibilitas sesuai kebutuhan usaha.</div>
+        <div class="pk-cell-num">07 — Future</div>
+        <div class="pk-cell-icon">☁️</div>
+        <div class="pk-cell-title">Full Cloud System</div>
+        <div class="pk-cell-desc">Transformasi menuju sistem cloud penuh.</div>
         <ul class="pk-cell-list">
-          <li>50+ konfigurasi per jenis toko</li>
-          <li>Multi POS Mode (Tunai/Kredit/Minimalis)</li>
-          <li>Multi Price (Eceran, Grosir, PAK, DUS)</li>
-          <li>Multi Discount (Member, Item, Promo)</li>
-          <li>Multi Branch (distribusi ke cabang)</li>
+          <li>Cloud POS Full Online</li>
+          <li>Sinkronisasi realtime</li>
+          <li>Backup otomatis</li>
+          <li>Akses global</li>
+          <li>Integrasi API</li>
         </ul>
       </div>
+
+      <div class="pk-cell pk-c3">
+        <div class="pk-cell-num">08 — Future</div>
+        <div class="pk-cell-icon">📱</div>
+        <div class="pk-cell-title">Mobile Ecosystem</div>
+        <div class="pk-cell-desc">Ekspansi ke aplikasi mobile.</div>
+        <ul class="pk-cell-list">
+          <li>Aplikasi kasir mobile</li>
+          <li>Aplikasi owner monitoring</li>
+          <li>Sales app (E-Sales)</li>
+          <li>Integrasi WhatsApp</li>
+          <li>Notifikasi realtime</li>
+        </ul>
+      </div>
+
+      <div class="pk-cell pk-c3">
+        <div class="pk-cell-num">09 — Future</div>
+        <div class="pk-cell-icon">🧠</div>
+        <div class="pk-cell-title">Advanced AI System</div>
+        <div class="pk-cell-desc">Pengembangan AI lebih canggih.</div>
+        <ul class="pk-cell-list">
+          <li>Prediksi stok otomatis</li>
+          <li>Rekomendasi pembelian</li>
+          <li>Analisis perilaku pelanggan</li>
+          <li>Smart reporting</li>
+          <li>Decision support system</li>
+        </ul>
+      </div>
+
+      <div class="pk-cell pk-c3">
+        <div class="pk-cell-num">10 — Future</div>
+        <div class="pk-cell-icon">🌍</div>
+        <div class="pk-cell-title">Omnichannel Integration</div>
+        <div class="pk-cell-desc">Integrasi semua channel penjualan.</div>
+        <ul class="pk-cell-list">
+          <li>Integrasi marketplace</li>
+          <li>Website toko online</li>
+          <li>POS + Online sync</li>
+          <li>Manajemen order terpusat</li>
+          <li>Multi channel analytics</li>
+        </ul>
+      </div>
+
+      <div class="pk-cell pk-c3">
+        <div class="pk-cell-num">11 — Future</div>
+        <div class="pk-cell-icon">🏢</div>
+        <div class="pk-cell-title">Enterprise System</div>
+        <div class="pk-cell-desc">Skalabilitas untuk bisnis besar.</div>
+        <ul class="pk-cell-list">
+          <li>Multi cabang nasional</li>
+          <li>Manajemen pusat & cabang</li>
+          <li>Audit sistem</li>
+          <li>Keamanan tingkat tinggi</li>
+          <li>Big data reporting</li>
+        </ul>
+      </div>
+
+      <div class="pk-cell pk-c3">
+        <div class="pk-cell-num">12 — Vision</div>
+        <div class="pk-cell-icon">🚀</div>
+        <div class="pk-cell-title">Digital Business Platform</div>
+        <div class="pk-cell-desc">Visi jangka panjang AuliaSoft.</div>
+        <ul class="pk-cell-list">
+          <li>All-in-one business platform</li>
+          <li>POS + Finance + CRM + AI</li>
+          <li>Ekosistem UMKM digital</li>
+          <li>Integrasi nasional</li>
+          <li>Platform bisnis modern Indonesia</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
+
+<!-- ======================================================== -->
+<!-- ====== COMPETITOR COMPARISON ====== -->
+<!-- ======================================================== -->
+<section id="comparison" style="
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+">
+
+    <div class="sec-center sr">
+      <div class="section-label">Analisis Kompetitor</div>
+      <h2 class="section-title">
+        Perbandingan <span class="grad-text">Aplikasi Kasir</span><br>
+        vs Kompetitor
+      </h2>
+      <p class="section-sub">
+        Analisis berbasis fitur, harga, dan teknologi sistem POS di Indonesia
+      </p>
+    </div>
+
+    <div class="table-wrap sr" style="margin-top:2.5rem;overflow:auto">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Aspek</th>
+            <th>AuliaSoft</th>
+            <th>Moka POS</th>
+            <th>Kasir Pintar</th>
+            <th>Pawoon</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Model Harga</td>
+            <td>✔ Beli Sekali (Lifetime)</td>
+            <td>✖ Berlangganan Bulanan</td>
+            <td>Freemium + Subscription</td>
+            <td>Subscription</td>
+          </tr>
+
+          <tr>
+            <td>Koneksi Internet</td>
+            <td>✔ Offline (Full)</td>
+            <td>✖ Harus Online</td>
+            <td>Hybrid</td>
+            <td>Online</td>
+          </tr>
+
+          <tr>
+            <td>Multi User</td>
+            <td>✔ LAN (Unlimited)</td>
+            <td>✔ Cloud</td>
+            <td>✔ Cloud</td>
+            <td>✔ Cloud</td>
+          </tr>
+
+          <tr>
+            <td>Fitur AI</td>
+            <td>✔ Ada (Nota & Stok)</td>
+            <td>✖ Tidak Ada</td>
+            <td>✖ Tidak Ada</td>
+            <td>✖ Tidak Ada</td>
+          </tr>
+
+          <tr>
+            <td>Jenis Usaha</td>
+            <td>✔ 50+ Jenis Toko</td>
+            <td>Fokus F&B</td>
+            <td>UMKM Umum</td>
+            <td>F&B</td>
+          </tr>
+
+          <tr>
+            <td>Dashboard Web</td>
+            <td>✔ (Opsional)</td>
+            <td>✔ Default</td>
+            <td>✔ Default</td>
+            <td>✔ Default</td>
+          </tr>
+
+          <tr>
+            <td>Biaya Jangka Panjang</td>
+            <td>✔ Lebih Hemat</td>
+            <td>✖ Mahal (Bulanan)</td>
+            <td>Sedang</td>
+            <td>Sedang</td>
+          </tr>
+
+          <tr>
+            <td>Support</td>
+            <td>✔ 18 Bulan Gratis</td>
+            <td>Subscription-based</td>
+            <td>Terbatas</td>
+            <td>Subscription-based</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Highlight Insight -->
+    <div class="comparison-highlight sr" style="margin-top:2.5rem">
+      <div class="highlight-box">
+        <h3>Insight Analisis</h3>
+        <p>
+          <strong>AuliaSoft</strong> unggul pada model <b>offline-first</b> dan 
+          <b>lifetime license</b>, sehingga cocok untuk UMKM yang ingin 
+          biaya stabil tanpa ketergantungan internet.
+        </p>
+        <p>
+          Sementara kompetitor seperti 
+          <strong>Moka POS</strong>, <strong>Kasir Pintar</strong>, dan <strong>Pawoon</strong> 
+          lebih kuat di ekosistem <b>cloud & SaaS</b>, namun memiliki biaya berulang.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- ======================================================== -->
 <!-- ====== USE CASE LEVEL 0 (TAMBAHAN UTS) ====== -->
@@ -1760,6 +1971,7 @@ window.addEventListener('scroll', () => {
 </head>
 
 
+
 <!-- ISI HTML LANGSUNG DI SINI (meskipun tanpa <body>) -->
 <section id="harga">...</section>
 
@@ -1782,10 +1994,6 @@ document.addEventListener("DOMContentLoaded", function(){
       }else{
         answer.style.maxHeight = null;
       }
-    });
-  });
-
-});
 </script>
 
 </html>
