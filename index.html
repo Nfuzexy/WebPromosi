@@ -355,6 +355,24 @@ img{max-width:100%}
 .btn-nav-wa:hover{opacity:.85;transform:scale(1.04)}
 .btn-nav-promo{background:var(--orange);color:#fff;padding:8px 18px;border-radius:var(--r999);font-size:.83rem;font-weight:700;transition:all .2s;white-space:nowrap}
 .btn-nav-promo:hover{opacity:.85}
+.btn-nav-login {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #000000;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid #d0d0d0;
+  transition: background 0.15s;
+}
+
+.btn-nav-login:hover {
+  background: #f5f5f5;
+}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;width:26px;flex-shrink:0}
 .hamburger span{display:block;height:2px;background:#fff;border-radius:2px;transition:all .3s}
 /* mobile menu */
@@ -590,6 +608,10 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
     <div class="nav-actions">
       <a class="btn-nav-promo" href="https://www.auliasoft.com/offer.html">Penawaran Khusus</a>
       <a class="btn-nav-wa" href="https://wa.me/6281241945881">Kontak WA</a>
+      <a class="btn-nav-login" href="login.html">
+        <i class="ti ti-user" aria-hidden="true"></i>
+        Login
+      </a>
     </div>
     <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
   </div>
@@ -618,6 +640,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
   <a href="https://kopdes.auliasoft.com/narasumber">Narasumber</a>
   <a class="btn-nav-promo" href="https://www.auliasoft.com/offer.html">Penawaran Khusus</a>
   <a class="btn-nav-wa" href="https://wa.me/6281241945881">Kontak via WhatsApp</a>
+  
 </div>
 
 <div class="page">
@@ -1735,6 +1758,7 @@ window.addEventListener('scroll', () => {
   </style>
 
 </head>
+
 
 <!-- ISI HTML LANGSUNG DI SINI (meskipun tanpa <body>) -->
 <section id="harga">...</section>
