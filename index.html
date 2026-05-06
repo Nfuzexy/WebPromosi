@@ -193,6 +193,61 @@
 </style>
 <head>
   <style>
+
+
+/* ====== HARDWARE SECTION ====== */
+
+#hardware {
+  padding: 100px 0;
+  background: transparent;
+}
+
+/* GRID */
+.hardware-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* CARD */
+.hardware-card {
+  padding: 24px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: all 0.3s ease;
+  color: rgba(255,255,255,0.85);
+}
+
+/* HOVER EFFECT */
+.hardware-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* ICON */
+.hardware-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.hardware-card h3 {
+  color: #fff;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* TEXT */
+.hardware-card p {
+  font-size: 13px;
+  line-height: 1.5;
+}
     
 /* ====== ULTRA TRANSPARENT GLASS ====== */
 
@@ -1527,6 +1582,72 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
 
 
 <!-- ======================================================== -->
+<!-- ====== PERANGKAT PENUNJANG POS ====== -->
+<!-- ======================================================== -->
+<section id="hardware">
+  <div class="container">
+
+    <div class="sec-center sr">
+      <div class="section-label">Perangkat Pendukung</div>
+      <h2 class="section-title">
+        Alat Penunjang <span class="grad-text">Aplikasi Kasir</span>
+      </h2>
+      <p class="section-sub">
+        Perangkat hardware yang digunakan untuk mendukung operasional sistem kasir (POS)
+      </p>
+    </div>
+
+    <div class="hardware-grid sr">
+
+      <!-- 1 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">💵</div>
+        <h3>Cash Drawer</h3>
+        <p>Laci uang otomatis yang terhubung dengan printer kasir.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">🧾</div>
+        <h3>Thermal Printer</h3>
+        <p>Mencetak struk transaksi dengan cepat tanpa tinta.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">📡</div>
+        <h3>Barcode Scanner</h3>
+        <p>Mempercepat input produk dengan scan barcode.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">💻</div>
+        <h3>POS Computer</h3>
+        <p>Perangkat utama untuk menjalankan aplikasi kasir.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">🖥️</div>
+        <h3>Customer Display</h3>
+        <p>Layar tambahan untuk menampilkan total belanja ke pelanggan.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="hardware-card">
+        <div class="hardware-icon">📶</div>
+        <h3>Router / LAN</h3>
+        <p>Menghubungkan beberapa kasir dalam satu jaringan.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======================================================== -->
 <!-- ====== USE CASE LEVEL 0 (TAMBAHAN UTS) ====== -->
 <!-- ======================================================== -->
 <section id="usecase" class="uc-section">
@@ -1751,13 +1872,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <div class="testimonial-text">
-          "TESTIMONI LAYANAN AULIASOFT Layanan Auliasoft cukup membantu KKMP Bojong nangka kec. Kelapa dua untuk mendukung layanan KKMP kepada anggota koperasi. Sistemnya mudah dipakai, dari pendaftaran online dan sudah terintegrasi dengan aplikasi POS."
+          ""Terbantu dengan Kesibukan Toko dan Dukungan Tim Auliasoft yang Selalu Membantu""
         </div>
         <div class="testimonial-author">
-          <div class="avatar">KK</div>
+          <div class="avatar">TN</div>
           <div>
-            KKMP BOJONG NANGKA<br>
-            <small>KKMP BOJONG NANGKA</small>
+            TOKO NAZRIL BNS<br>
+            <small>TOKO NAZRIL BNS</small>
           </div>
         </div>
       </div>
@@ -1779,13 +1900,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <div class="testimonial-text">
-          "Aulia Soft, Solusi Cerdas untuk Pencatatan Transaksi KSPPS NU Benjeng"
+          "Software Aulia Soft Sangat Baik"
         </div>
         <div class="testimonial-author">
-          <div class="avatar">KS</div>
+          <div class="avatar">MM</div>
           <div>
-            KSPPS NU BENJENG<br>
-            <small>KSPPS NU BENJENG</small>
+            MINIMARKET INDOMAK<br>
+            <small>MINIMARKET INDOMAK</small>
           </div>
         </div>
       </div>
