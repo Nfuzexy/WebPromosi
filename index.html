@@ -194,6 +194,79 @@
 <head>
   <style>
 
+/* ====== TARGET AUDIENCE ====== */
+
+#target-audience{
+  padding:100px 0;
+  background:transparent;
+}
+
+/* GRID */
+.audience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+  margin-top:45px;
+}
+
+/* CARD */
+.audience-card{
+  padding:28px;
+  border-radius:24px;
+
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:all .35s ease;
+}
+
+/* HOVER */
+.audience-card:hover{
+  transform:translateY(-8px);
+
+  background:rgba(255,255,255,0.05);
+
+  box-shadow:0 10px 30px rgba(10,132,255,0.10);
+}
+
+/* ICON */
+.audience-icon{
+  font-size:34px;
+  margin-bottom:18px;
+}
+
+/* TITLE */
+.audience-card h3{
+  color:#fff;
+  font-size:19px;
+  margin-bottom:12px;
+}
+
+/* TEXT */
+.audience-card p{
+  color:rgba(255,255,255,0.75);
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+/* TAG */
+.audience-tag{
+  display:inline-block;
+
+  padding:7px 14px;
+  border-radius:999px;
+
+  background:rgba(10,132,255,0.12);
+
+  border:1px solid rgba(10,132,255,0.18);
+
+  color:#7fc2ff;
+  font-size:12px;
+}
+
 /* ====== PROCESS & POLICIES ====== */
 
 #process-policy{
@@ -1114,6 +1187,143 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border2);padding:3
 </section>
 
 <div class="divider"></div>
+
+
+<!-- ======================================================== -->
+<!-- ====== TARGET AUDIENCE ====== -->
+<!-- ======================================================== -->
+<section id="target-audience">
+  <div class="container">
+
+    <div class="sec-center sr">
+      <div class="section-label">Target Audience</div>
+      <h2 class="section-title">
+        Target <span class="grad-text">Pengguna</span>
+      </h2>
+      <p class="section-sub">
+        Aplikasi Kasir AuliaSoft dirancang untuk berbagai skala usaha,
+        mulai dari UMKM hingga bisnis multi cabang.
+      </p>
+    </div>
+
+    <div class="audience-grid sr">
+
+      <!-- 1 -->
+      <div class="audience-card">
+        <div class="audience-icon">🏪</div>
+
+        <h3>Pemilik Toko Retail</h3>
+
+        <p>
+          Cocok untuk pemilik toko kelontong,
+          minimarket, grosir, dan usaha retail modern.
+        </p>
+
+        <span class="audience-tag">Retail Business</span>
+      </div>
+
+      <!-- 2 -->
+      <div class="audience-card">
+        <div class="audience-icon">☕</div>
+
+        <h3>Owner Cafe & Restaurant</h3>
+
+        <p>
+          Mendukung operasional cafe,
+          coffee shop, rumah makan, dan food court.
+        </p>
+
+        <span class="audience-tag">F&B Industry</span>
+      </div>
+
+      <!-- 3 -->
+      <div class="audience-card">
+        <div class="audience-icon">📱</div>
+
+        <h3>Counter HP & Elektronik</h3>
+
+        <p>
+          Digunakan untuk manajemen penjualan,
+          service, dan stok perangkat elektronik.
+        </p>
+
+        <span class="audience-tag">Electronic Store</span>
+      </div>
+
+      <!-- 4 -->
+      <div class="audience-card">
+        <div class="audience-icon">🧺</div>
+
+        <h3>Usaha Jasa</h3>
+
+        <p>
+          Cocok untuk laundry, salon,
+          bengkel, dan bisnis berbasis layanan.
+        </p>
+
+        <span class="audience-tag">Service Business</span>
+      </div>
+
+      <!-- 5 -->
+      <div class="audience-card">
+        <div class="audience-icon">🏢</div>
+
+        <h3>Koperasi & Instansi</h3>
+
+        <p>
+          Mendukung kebutuhan administrasi,
+          transaksi, dan laporan koperasi digital.
+        </p>
+
+        <span class="audience-tag">Organization</span>
+      </div>
+
+      <!-- 6 -->
+      <div class="audience-card">
+        <div class="audience-icon">📈</div>
+
+        <h3>Bisnis Multi Cabang</h3>
+
+        <p>
+          Cocok untuk perusahaan dengan
+          banyak cabang dan monitoring terpusat.
+        </p>
+
+        <span class="audience-tag">Enterprise</span>
+      </div>
+
+      <!-- 7 -->
+      <div class="audience-card">
+        <div class="audience-icon">👨‍💼</div>
+
+        <h3>Owner UMKM</h3>
+
+        <p>
+          Membantu UMKM melakukan digitalisasi
+          transaksi dan pengelolaan usaha.
+        </p>
+
+        <span class="audience-tag">UMKM</span>
+      </div>
+
+      <!-- 8 -->
+      <div class="audience-card">
+        <div class="audience-icon">💻</div>
+
+        <h3>Administrator Kasir</h3>
+
+        <p>
+          Mempermudah admin dalam pengelolaan
+          stok, laporan, dan data transaksi.
+        </p>
+
+        <span class="audience-tag">Operational Staff</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 <!-- ====== KATEGORI ====== -->
 <section id="kategori">
